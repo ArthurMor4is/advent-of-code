@@ -21,23 +21,25 @@ numbers_dict = {
     "eight": 8,
     "8": 8,
     "nine": 9,
-    "9": 9
+    "9": 9,
 }
+
 
 def part_1():
     total = 0
-    with open('input.txt', 'r') as f:
+    with open("input.txt", "r") as f:
         line = f.readline()
         while line:
             digits = [int(char) for char in line if char.isdigit()]
-            cal_value = 10*digits[0] + digits[-1]
+            cal_value = 10 * digits[0] + digits[-1]
             total += cal_value
             line = f.readline()
     return total
 
+
 def part_2():
     total = 0
-    with open(file_path, 'r') as f:
+    with open(file_path, "r") as f:
         line = f.readline()
         total = 0
         while line:
@@ -53,13 +55,12 @@ def part_2():
                 if end > gratest and end != -1:
                     last = numbers_dict[number]
                     gratest = end
-            cal_value = 10*int(first) + int(last)
+            cal_value = 10 * int(first) + int(last)
             total += cal_value
             line = f.readline()
     return total
 
-    
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print(part_1())
     print(part_2())

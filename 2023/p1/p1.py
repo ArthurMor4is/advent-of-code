@@ -27,7 +27,7 @@ numbers_dict = {
 
 def part_1():
     total = 0
-    with open("input.txt", "r") as f:
+    with open(file_path, "r") as f:
         line = f.readline()
         while line:
             digits = [int(char) for char in line if char.isdigit()]

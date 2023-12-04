@@ -5,3 +5,4 @@ My solutions for: https://adventofcode.com/
     * [Day 1](2023/p1/)
     * [Day 2](2023/p2/)
     * [Day 3](2023/p3/)
+    * [Day 4](2023/p4/)

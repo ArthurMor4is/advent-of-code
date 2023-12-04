@@ -48,9 +48,11 @@ def gears_ratio_for_second_line(
                 right_number_third_line,
             ]
             result = 1
-            if all_adjacent_numbers.count(-1) == 4: # Equivalence with the condition "exactly two part numbers"
+            if (
+                all_adjacent_numbers.count(-1) == 4
+            ):  # Equivalence with the condition "exactly two part numbers"
                 for number in all_adjacent_numbers:
-                    result *= number # Even number of -1 has 1 as result
+                    result *= number  # Even number of -1 has 1 as result
                 total += result
         gear_index += 1
     return total

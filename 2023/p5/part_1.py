@@ -1,4 +1,3 @@
-
 import os
 
 script_directory = os.path.dirname(os.path.abspath(__file__))
@@ -10,18 +9,6 @@ def part_1():
     with open(file_path, "r") as f:
         line = f.readline()
         seeds = get_seeds(line)
-        for seed in seeds:
-            seed_location = get_location(seed)
-            if seed_location < lowest_location:
-                lowest_location = seed_location
-    return lowest_location
-
-
-def part_2():
-    lowest_location = float("inf")
-    with open(file_path, "r") as f:
-        line = f.readline()
-        seeds = get_seeds_from_range(line)
         for seed in seeds:
             seed_location = get_location(seed)
             if seed_location < lowest_location:
@@ -99,5 +86,4 @@ def get_destination_from_line(d_start_range, s_start_range, r, source):
 
 
 if __name__ == "__main__":
-    # print(part_1())
-    print(part_2())
+    print(part_1())

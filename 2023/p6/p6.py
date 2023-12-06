@@ -12,6 +12,7 @@ def part_1():
         result = get_total_options(times, distances)
     return result
 
+
 def part_2():
     result = None
     with open(file_path, "r") as f:
@@ -20,9 +21,10 @@ def part_2():
         result = get_total_options([unique_time], [unique_distance])
     return result
 
+
 def get_unique_time(line):
     chars = line.replace("\n", "").split(":")[-1].split("  ")[:]
-    result = ''
+    result = ""
     for char in chars:
         if char != "":
             result += char
@@ -31,11 +33,12 @@ def get_unique_time(line):
 
 def get_unique_distance(line):
     chars = line.replace("\n", "").split(":")[-1].split("  ")[:]
-    result = ''
+    result = ""
     for char in chars:
         if char != "":
             result += char
     return int(result.replace(" ", ""))
+
 
 def get_times(line):
     chars = line.replace("\n", "").split(":")[-1].split("  ")[:]
@@ -45,6 +48,7 @@ def get_times(line):
             result.append(int(char))
     return result
 
+
 def get_distances(line):
     chars = line.replace("\n", "").split(":")[-1].split("  ")[:]
     result = []
@@ -52,6 +56,7 @@ def get_distances(line):
         if char != "":
             result.append(int(char))
     return result
+
 
 def get_total_options(times, distances):
     """
@@ -66,13 +71,14 @@ def get_total_options(times, distances):
         T = times[i]
         record = distances[i]
         for t_holding in range(T):
-            if t_holding*(T - t_holding) > record:
+            if t_holding * (T - t_holding) > record:
                 current_ways += 1
         total_ways.append(current_ways)
     result = 1
     for number in total_ways:
         result *= number
     return result
+
 
 if __name__ == "__main__":
     print(part_1())

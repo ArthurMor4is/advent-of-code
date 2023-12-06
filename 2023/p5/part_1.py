@@ -22,23 +22,6 @@ def get_seeds():
     return [int(number) for number in seeds_text]
 
 
-def get_seeds_from_range(line):
-    seeds = set()
-    with open(file_path, "r") as f:
-        line = f.readline()
-        seeds_text = line[:-1].split(":")[-1].split(" ")[1:]
-    p = 0
-    q = 1
-    while q < len(seeds_text):
-        seed_p = int(seeds_text[p])
-        seed_range = int(seeds_text[q])
-        for i in range(seed_range):
-            seeds.add(seed_p + i)
-        p += 2
-        q += 2
-    return list(seeds)
-
-
 def get_location(seed):
     destination = seed
     with open(file_path, "r") as f:

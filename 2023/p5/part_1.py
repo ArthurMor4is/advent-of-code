@@ -7,8 +7,7 @@ file_path = os.path.join(script_directory, "input.txt")
 def part_1():
     lowest_location = float("inf")
     with open(file_path, "r") as f:
-        line = f.readline()
-        seeds = get_seeds(line)
+        seeds = get_seeds()
         for seed in seeds:
             seed_location = get_location(seed)
             if seed_location < lowest_location:
@@ -16,7 +15,7 @@ def part_1():
     return lowest_location
 
 
-def get_seeds(line):
+def get_seeds():
     with open(file_path, "r") as f:
         line = f.readline()
         seeds_text = line[:-1].split(":")[-1].split(" ")[1:]

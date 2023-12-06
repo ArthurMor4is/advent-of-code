@@ -6,3 +6,5 @@ My solutions for: https://adventofcode.com/
     * [Day 2](2023/p2/)
     * [Day 3](2023/p3/)
     * [Day 4](2023/p4/)
+    * [Day 5](2023/p5/)
+    * [Day 6](2023/p6/)

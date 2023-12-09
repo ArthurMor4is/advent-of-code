@@ -8,3 +8,6 @@ My solutions for: https://adventofcode.com/
     * [Day 4](2023/p4/)
     * [Day 5](2023/p5/)
     * [Day 6](2023/p6/)
+    * [Day 7](2023/p7/)
+    * [Day 8](2023/p8/)
+    * [Day 9](2023/p9/)

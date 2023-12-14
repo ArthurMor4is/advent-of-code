@@ -13,3 +13,5 @@ My solutions for: https://adventofcode.com/
     * [Day 9](2023/p9/)
     * [Day 10](2023/p10/)
     * [Day 11](2023/p11/)
+    * [Day 11](2023/p13/)
+    * [Day 11](2023/p14/)

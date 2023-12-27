@@ -6,6 +6,7 @@ file_path = os.path.join(script_directory, "input.txt")
 import networkx as nx
 import matplotlib.pyplot as plt
 
+
 def part_1():
     result = None
     G = create_graph()
@@ -13,6 +14,7 @@ def part_1():
     G.remove_edges_from(cut_edges)
     connected_components = list(nx.connected_components(G))
     return len(connected_components[0]) * len(connected_components[1])
+
 
 def create_graph():
     G = nx.Graph()

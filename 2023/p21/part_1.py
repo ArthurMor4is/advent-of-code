@@ -12,9 +12,11 @@ def part_1():
         result = count_plots(map)
     return result
 
+
 def print_map(map):
     for line in map:
         print("".join(line))
+
 
 def get_map():
     map = []
@@ -26,6 +28,7 @@ def get_map():
             line = f.readline().replace("\n", "")
     return map
 
+
 def step(map):
     s_locations = []
     for i in range(len(map)):
@@ -34,6 +37,7 @@ def step(map):
                 s_locations.append((i, j))
     map = step_s(map, s_locations)
     return map
+
 
 def step_s(map, s_locations):
     update_positions = {location: [] for location in s_locations}
@@ -57,7 +61,8 @@ def step_s(map, s_locations):
             map[value[0]][value[1]] = "S"
             map[key[0]][key[1]] = "."
     return map
-    
+
+
 def count_plots(map):
     # Count S plots
     result = 0
